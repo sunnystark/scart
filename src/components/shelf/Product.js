@@ -21,7 +21,7 @@ const Product = (props) => {
 
     productInstallment = (
       <div className="installment">
-        <span>or {product.installments} x</span><b> {product.currencyFormat} {util.formatPrice(installmentPrice, product.currencyId)}</b>
+        <span>or {product.installments} x </span><b> {product.currencyFormat} {util.formatPrice(installmentPrice, product.currencyId)}</b>
       </div>
     );
   }

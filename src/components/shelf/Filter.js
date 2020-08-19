@@ -7,14 +7,14 @@ import { updateSort } from '../../store/actions/sortActions';
 import Checkbox from '../Checkbox';
 
 
-const availableSizes = [
-  'XS',
-  'S',
-  'M',
-  'ML',
-  'L',
-  'XL',
-  'XXL',
+const availableBrand = [
+  'B1',
+  'B2',
+  'B3',
+  'B4',
+  'B5',
+  'B6',
+  'B7',
 ];
 const availableColor = [
   'C1',
@@ -25,7 +25,7 @@ const availableColor = [
   'C6',
   'C7',
 ];
-const sortByPrice = [
+const sortByBrand = [
   { value: '',           label: 'Select'  },
   { value: 'lowestprice', label: 'Lowest to highest' },
   { value: 'highestprice', label: 'Highest to lowest' },
@@ -70,7 +70,7 @@ class Filter extends Component {
   )
 
   createCheckboxes = () => (
-    availableSizes.map(this.createCheckbox)
+    availableBrand.map(this.createCheckbox)
   )
 
   availableColor = () => (
@@ -95,7 +95,7 @@ class Filter extends Component {
         <hr/>
         <br/>
         <h4 className="title">Price:</h4>
-         <Selectbox options={sortByPrice} handleOnChange={this.handleSort}/>
+         <Selectbox options={sortByBrand} handleOnChange={this.handleSort}/>
          <br/>
         
         <br/>
