@@ -44,6 +44,8 @@ class Shelf extends Component {
 
   render() {
     const { products } = this.props;
+
+    console.log('add product respoense ', products)
     
     const p = products.map(p => {
       return (

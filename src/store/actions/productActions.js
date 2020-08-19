@@ -2,7 +2,7 @@ import { FETCH_PRODUCTS } from './types';
 import axios from 'axios';
 
 
-const productsAPI = "https://react-shopping-cart-67954.firebaseio.com/products.json";
+const productsAPI = "https://xebiascart.herokuapp.com/products";
 
 
 const compare = {
@@ -27,6 +27,7 @@ export const fetchProducts = (filters, sortBy, callback) => dispatch => {
   axios.get(productsAPI)
     .then(res => {
       let { products } = res.data;
+      console.log('sssssssssssssss', res.data);
 
       if(!!filters && filters.length > 0){
         products = products.filter( p => filters.find( f => p.availableSizes.find( size => size === f ) ) )
